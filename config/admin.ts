@@ -6,13 +6,6 @@ export const adminConfig: AdminConfig ={
             id: '1',
             name: "admin",
         },
-        {
-            id: '2',
-            name: "interviewer",
-        },
-        {
-            id: '3',
-            name: "user",
-        },
+
     ]
 }
