@@ -23,6 +23,7 @@
     "@types/react-dom": "18.2.7",
     "@vercel/analytics": "^1.0.1",
     "autoprefixer": "10.4.14",
+    "bcrypt": "^5.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "eslint": "8.46.0",
@@ -44,6 +45,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.1",
     "prisma": "^5.1.1"
   }
 }

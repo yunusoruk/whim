@@ -43,15 +43,16 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  admin         Boolean   @default(false)
-  role          String    @default("user")
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
+  id             String    @id @default(cuid())
+  name           String?
+  email          String?   @unique
+  emailVerified  DateTime?
+  image          String?
+  hashedPassword String?
+  admin          Boolean   @default(false)
+  role           String    @default("user")
+  createdAt      DateTime  @default(now()) @map(name: "created_at")
+  updatedAt      DateTime  @default(now()) @map(name: "updated_at")
 
   accounts Account[]
   sessions Session[]

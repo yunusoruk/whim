@@ -20,10 +20,6 @@ export default async function MarketingLayout({
 
     const user = await getCurrentUser()
 
-    if (!user) {
-        return notFound()
-    }
-
     return (
         <div className="flex min-h-screen flex-col">
             <header className="container z-40 bg-background">

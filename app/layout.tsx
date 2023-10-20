@@ -31,18 +31,18 @@ export const metadata = {
   ],
   authors: [
     {
-      name: "keci",
-      url: "https://keci.io",
+      name: "yo",
+      url: "https://yo.io",
     },
   ],
-  creator: "keci",
+  creator: "yo",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   openGraph: {
     type: "website",
-    locale: "tr_TR",
+    locale: "en_US",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -53,7 +53,7 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og.jpg`],
-    creator: "@shadcn",
+    creator: "@yo",
   },
   icons: {
     icon: "/favicon.ico",
@@ -71,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="tr">
+    <html lang="en" suppressHydrationWarning>
       <head />
       <body
         className={cn(
