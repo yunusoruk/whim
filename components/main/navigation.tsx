@@ -23,7 +23,7 @@ import {
   PopoverTrigger,
   PopoverContent,
 } from "@/components/ui/popover";
-// import { useSearch } from "@/hooks/use-search";
+import { useSearch } from "@/hooks/use-search";
 // import { useSettings } from "@/hooks/use-settings";
 
 import { UserItem } from "./user-item";
@@ -34,7 +34,7 @@ import { TrashBox } from "./trash-box";
 export const Navigation = () => {
   const router = useRouter();
   //   const settings = useSettings();
-  //   const search = useSearch();
+  const search = useSearch();
   const params = useParams();
   const pathname = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -159,7 +159,7 @@ export const Navigation = () => {
             label="Search"
             icon={Search}
             isSearch
-          // onClick={search.onOpen}
+            onClick={search.onOpen}
           />
           <Item
             label="Settings"
