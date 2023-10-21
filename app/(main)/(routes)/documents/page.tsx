@@ -46,8 +46,8 @@ const DocumentsPage = () => {
                 Welcome to {user?.firstName}&apos;s Whim
             </h2>
             <Button onClick={onCreate}>
-                <PlusCircle className="h-4 w-4 mr-2" />
-                Create a note
+                {/* <PlusCircle className="h-4 w-4 mr-2" /> */}
+                Create a document
             </Button>
         </div>
     );
