@@ -4,9 +4,11 @@ import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import localFont from "next/font/local"
 import { siteConfig } from '@/config/site'
-import { ThemeProvider } from '@/components/theme-provider'
+import { ThemeProvider } from '@/components/providers/theme-provider'
 import { Analytics } from '@/components/analytics'
-import { Toaster } from '@/components/ui/toaster'
+import { Toaster } from 'sonner'
+import { TailwindIndicator } from '@/components/tailwind-indicator'
+import { ConvexClientProvider } from '@/components/providers/convex-provider'
 
 const fontSans = FontSans({ subsets: ['latin'], variable: "--font-sans" })
 
@@ -80,11 +82,14 @@ export default function RootLayout({
           fontHeading.variable
         )}
       >
-        <ThemeProvider attribute='class' defaultTheme='system' enableSystem >
-          {children}
-          <Analytics />
-          <Toaster />
-        </ThemeProvider>
+        <ConvexClientProvider>
+          <ThemeProvider attribute='class' defaultTheme='system' enableSystem >
+            {children}
+            <Analytics />
+            <Toaster />
+            <TailwindIndicator />
+          </ThemeProvider>
+        </ConvexClientProvider>
       </body>
     </html>
   )

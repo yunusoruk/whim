@@ -10,6 +10,7 @@ import {
     FileText,
     HelpCircle,
     Image,
+    Kanban,
     Laptop,
     Loader2,
     LucideProps,
@@ -28,7 +29,7 @@ import {
 
 
 export const Icons = {
-    logo: Command,
+    logo: Kanban,
     close: X,
     spinner: Loader2,
     chevronLeft: ChevronLeft,

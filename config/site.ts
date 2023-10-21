@@ -1,14 +1,13 @@
-import { SiteConfig } from "@/types"
+import { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "yo",
-  description:
-    "yo | Get ready ..",
-  url: "https://yo.io",
-  ogImage: "https://yo.io/og.jpg",
+  name: "whim",
+  description: "whim | Share with whim",
+  url: "https://whim-yo.vercel.app",
+  ogImage: "https://whim-yo.vercel.app/og.jpg",
   links: {
-    twitter: "https://twitter.com/yo",
+    twitter: "https://twitter.com/whim",
     github: "https://github.com/yunusoruk",
-    mail: "mailto:info@yo.io",
+    mail: "mailto:info@whim-yo.vercel.app",
   },
-}
+};
