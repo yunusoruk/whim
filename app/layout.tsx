@@ -10,7 +10,6 @@ import { Toaster } from 'sonner'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ConvexClientProvider } from '@/components/providers/convex-provider'
 import { ModalProvider } from '@/components/providers/modal-provider'
-import { SearchCommand } from '@/components/search-command'
 
 const fontSans = FontSans({ subsets: ['latin'], variable: "--font-sans" })
 
@@ -87,7 +86,6 @@ export default function RootLayout({
         <ConvexClientProvider>
           <ThemeProvider attribute='class' defaultTheme='system' enableSystem >
             {children}
-            <SearchCommand />
             <ModalProvider />
             <Analytics />
             <Toaster />
