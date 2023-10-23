@@ -10,6 +10,7 @@ import { Toaster } from 'sonner'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ConvexClientProvider } from '@/components/providers/convex-provider'
 import { ModalProvider } from '@/components/providers/modal-provider'
+import { EdgeStoreProvider } from '@/lib/edgestore'
 
 const fontSans = FontSans({ subsets: ['latin'], variable: "--font-sans" })
 
@@ -84,13 +85,15 @@ export default function RootLayout({
         )}
       >
         <ConvexClientProvider>
-          <ThemeProvider attribute='class' defaultTheme='system' enableSystem >
-            {children}
-            <ModalProvider />
-            <Analytics />
-            <Toaster />
-            <TailwindIndicator />
-          </ThemeProvider>
+          <EdgeStoreProvider>
+            <ThemeProvider attribute='class' defaultTheme='system' enableSystem >
+              {children}
+              <ModalProvider />
+              <Analytics />
+              <Toaster />
+              <TailwindIndicator />
+            </ThemeProvider>
+          </EdgeStoreProvider>
         </ConvexClientProvider>
       </body>
     </html>
